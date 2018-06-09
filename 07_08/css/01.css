@@ -1,0 +1,154 @@
+.cl{
+    clear: both;
+    height: 14px;
+}
+
+div{
+    padding: 0;
+    margin: 0;
+}
+
+.box1 {
+    /*
+        第三种方式
+        显式声明了Flex容器
+    */
+    display: flex;
+}
+
+.box1-left {
+
+    /*
+        第一种方式
+        float: left;
+    */
+
+    /*
+        第二种方式
+        position: absolute;
+        left: 0;
+    */
+    width: 30%;
+    height: 100px;
+    background-color: #eee;
+}
+
+.box1-right {
+
+    /*
+        第一种方式
+        float: right;
+    */
+
+    /*
+        第二种方式
+        position: absolute;
+        right: 0;
+    */
+    width: 70%;
+    height: 100px;
+    background-color: #6a6a6a;
+}
+
+.box2 {
+    position: relative;
+    overflow: hidden;
+}
+
+.box2-left {
+    float: left;
+    width: 180px;
+    height: 100px;
+    background-color: #eee;
+}
+
+.box2-right {
+    position: relative;
+    top: 0;
+    left: 180px;
+    width: auto;
+    height: 100px;
+    background-color: #6a6a6a;
+}
+
+.box3 {
+    position: relative;
+    overflow: hidden;
+}
+
+.box3-left {
+    width: 100%;
+    height: 100px;
+    background-color: #eee;
+}
+
+.box3-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 180px;
+    height: 100px;
+    background-color: #6a6a6a;
+}
+
+.box4 {
+    position: relative;
+    overflow: hidden;
+}
+
+.box4-left {
+    width: 180px;
+    height: 100px;
+    background-color: #eee;
+}
+
+.box4-zj {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 180px;
+    width: 100%;
+    height: 100px;
+    background-color: #f3b32e;
+}
+
+.box4-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 180px;
+    height: 100px;
+    background-color: #6a6a6a;
+}
+
+.box5 {
+    position: relative;
+    overflow: hidden;
+}
+
+.box5-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 180px;
+    height: 100px;
+    background-color: #eee;
+}
+
+.box5-zj {
+    position: absolute;
+    top: 0;
+    left: 180px;
+    z-index: 3;
+    width: 180px;
+    height: 100px;
+    background-color: #f3b32e;
+}
+
+.box5-right {
+    right: 360px;
+    width: 100%;
+    height: 100px;
+    background-color: #6a6a6a;
+}

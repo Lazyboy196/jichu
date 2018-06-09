@@ -1,0 +1,37 @@
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.font_h4 {
+    -webkit-margin-before: 1.33em;
+    -webkit-margin-after: 1.33em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    font-weight: bold;
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding-left: 300px;
+}
+
+.resume {
+    font-size: 32px;
+    line-height: 1.4;
+}
+
+.info .headline {
+    font-size: 26px;
+    line-height: 1;
+}

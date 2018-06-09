@@ -1,0 +1,192 @@
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin:0;
+    padding:0;
+}
+fieldset, img,input,button {
+    border:none;
+    padding:0;
+    margin:0;
+    outline-style:none;
+}
+
+ul, ol { list-style:none; }
+
+i { font-style: normal; }
+
+a { text-decoration:none; }
+
+body {
+    font-family: Arial,Verdana,"宋体";
+    color:#666;
+    background:#fff;
+    overflow-x: hidden;
+}
+
+.w{
+    width: 1350px;
+    margin: 0 auto;
+}
+
+.cb {
+    clear: both;
+}
+
+.top {
+    height: 80px;
+    background-color: #333;
+    color: #E5FFFF;
+}
+
+.top .log{
+    float: left;
+    padding-left: 200px;
+    font-size: 30px;
+    line-height: 60px;
+}
+
+.top .text{
+    float: left;
+    position: absolute;
+    left: 1000px;
+}
+
+.top .text a {
+    margin-right: 2px;
+    text-decoration:underline;
+    color: #E5FFFF;
+}
+
+.banner {
+    height: 300px;
+    background-color: #66BB33;
+}
+
+.banner .banner-nav .btn-group {
+    position: relative;
+    left: 1000px;
+    top: 255px;
+}
+
+.banner .banner-nav .btn-group span{
+    float: left;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+}
+
+.banner .banner-nav .btn-group .btn3 {
+    position: relative;
+    top: -30px;
+    height: 60px;
+}
+
+.middle {
+    height: 650px;
+
+}
+
+.middle .tab {
+    margin-top: 20px;
+    margin-left: 205px;
+}
+
+.middle .tab div{
+    float: left;
+    width: 105px;
+    height: 50px;
+    font-size: 18px;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid #DDD;
+    border-radius:20px 20px 0 0;
+    -moz-border-radius:20px 20px 0 0;
+    background-color: #EEE;
+}
+
+.middle .tab .tab1 {
+    border-bottom: 0;
+    height: 51px;
+    position: relative;
+    bottom: -1px;
+    background-color: #fff;
+}
+
+.middle .content-box {
+    border-top: 1px solid #DDD;
+    padding-left: 200px;
+}
+
+.middle .content-box .content-X-box {
+    width: 950px;
+}
+
+.middle .content-box .content-X-box div {
+    font-size: 18px;
+    text-align: center;
+    float: left;
+    border: 1px solid #eee;
+    margin-top: 10px;
+    margin-right: 8px;
+}
+
+.middle .content-box .content-X-box .context1,
+.middle .content-box .content-X-box .context2,
+.middle .content-box .content-X-box .context3 {
+    width: 325px;
+    height: 175px;
+    font-size: 18px;
+    line-height: 175px;
+    margin-right: 8px;
+}
+
+.middle .content-box .content-X-box .context3 {
+    width: 275px;
+    margin-right: 0;
+}
+
+.middle .content-box .content-X-box .context4,
+.middle .content-box .content-X-box .context5,
+.middle .content-box .content-X-box .context6,
+.middle .content-box .content-X-box .context7 {
+    width: 230px;
+    height: 175px;
+    line-height: 175px;
+}
+
+.middle .content-box .content-X-box .context7 {
+    width: 228px;
+    margin-right: 0;
+}
+
+.middle .content-box .content-X-box .context8,
+.middle .content-box .content-X-box .context9,
+.middle .content-box .content-X-box .context10 {
+    width: 305px;
+    height: 175px;
+    line-height: 175px;
+    margin-right: 12px;
+}
+
+.middle .content-box .content-X-box .context10 {
+    width: 310px;
+    margin-right: 0;
+}
+
+.footer {
+    height: 120px;
+    background-color: #666;
+}
+
+.footer div {
+    padding-top: 20px;
+    text-align: center;
+    color: #E5FFFF;
+}
+
+.footer div a {
+    color: #E5FFFF;
+}

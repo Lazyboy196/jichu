@@ -1,0 +1,251 @@
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin:0;
+    padding:0;
+}
+fieldset, img,input,button {
+    padding:0;
+    margin:0;
+    outline-style:none;
+}
+
+ul, ol { list-style:none; }
+
+i { font-style: normal; }
+
+a { text-decoration:none; }
+
+body {
+    font-family: Arial,Verdana,"宋体";
+    overflow-x: hidden;
+}
+
+.w{
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.cb {
+    clear: both;
+}
+
+.header {
+    height: 990px;
+    background-image: url("../img/图层 1.png");
+    text-align: center;
+    color: #fff;
+}
+
+.header .header-bg {
+    background-image: url("../img/Background .png");
+    height: 100%;
+    width: 100%;
+}
+
+.header .text {
+    padding-top: 205px;
+    padding-bottom:85px ;
+}
+
+.text .text-title {
+    padding-bottom:85px ;
+    font-size: 62px;
+    line-height: 72px;
+}
+
+.text .text-message {
+    font-size: 20px;
+    line-height: 32px;
+    color: #8b8a87;
+}
+
+.register {
+    width: 970px;
+    height: 250px;
+    margin: 0 auto;
+    background-image: url('../img/Placeholder.png');
+}
+
+.register .register-title {
+    padding-top: 50px;
+    font-size: 16px;
+    line-height: 27px;
+}
+
+.register .register-message {
+    font-size: 12px;
+    color: #676561;
+}
+
+.register .input-field{
+    text-align: center;
+}
+
+.register .input-from {
+    margin: 40px 0;
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.register .input-from .username {
+    color: #eee;
+}
+
+.register .input-from input {
+    border: #676561 1px solid;
+    color: #676561;
+    width: 300px;
+    height: 50px;
+    padding-left: 20px;
+    margin-left: 20px;
+    background-color: transparent;
+    display: inline-block;
+}
+
+.register .input-from .squared-button {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 22px;
+    height: 50px;
+    width: 125px;
+    background-color: #fff;
+    border: 0;
+    margin-left: 20px;
+}
+
+
+.middle .feature {
+    background-color: #fff;
+    width: 1300px;
+    height: 710px;
+    color: #141414;
+}
+
+.middle .feature .feature-title {
+    text-align: center;
+    padding: 90px 0 75px 0;
+}
+
+.middle .feature .feature-title .title1 {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 35px;
+}
+
+.middle .feature .feature-title .title2 {
+    font-size: 42px;
+    line-height: 52px;
+}
+
+.middle .features>div {
+    float: left;
+}
+
+.middle .features>div {
+    width: 440px;
+    height: 100px;
+    margin-left: 120px;
+}
+
+.middle .features>div>div {
+    float: left;
+}
+
+.middle .features .feature-icon{
+    margin-right: 30px;
+    text-align: center;
+}
+
+.middle .features .feature-icon-info{
+    width: 365px;
+}
+
+.middle .features .feature-icon {
+    display: block;
+    height: 50px;
+    width: 30px;
+}
+
+.middle .action {
+    background: url("../img/图层 2.png") no-repeat;
+    height: 800px;
+}
+
+.middle .action .action-bg {
+    background: url("../img/Background .png");
+    height: 100%;
+    width: 100%;
+}
+
+.middle .action .action-text {
+    width: 370px;
+    height: 320px;
+    margin-bottom: 50px;
+    padding-top: 180px;
+}
+
+.middle .action .feature-icon-title{
+    font:42px/52px "Microsoft YaHei UI Light";
+    color: #fff;
+}
+
+.middle .action .feature-icon-message{
+    font:18px/28px "Microsoft YaHei";
+    color: #848886;
+}
+
+.middle .action button {
+    width: 240px;
+    height: 60px;
+    border: none;
+    background-color: #fff;
+    margin-right: 10px;
+}
+
+.middle .action .btn-try {
+    color: #fff;
+    border: 1px solid #8b8a87;
+    background-color: transparent;
+}
+
+.middle .action .photo {
+    position: absolute;
+    right: 0;
+}
+
+.middle .action .IPad {
+    position: relative;
+    width: 640px;
+    height: 600px;
+    right: 0;
+    bottom: 500px;
+    background: url("../img/IPad.png") no-repeat;
+}
+
+.middle .action .Screen {
+    position: relative;
+    left: 60px;
+    top: 30px;
+    background: url("../img/Screen.png") no-repeat;
+    width: 585px;
+    height: 542px;
+}
+.middle .products {
+    height: 580px;
+}
+
+.middle .beautifully-img {
+    height: 1000px;
+}
+
+.middle .team {
+    height: 1084px;
+}
+
+.middle .contact {
+    height: 700px;
+}
+
+.footer {
+    height: 410px;
+    background-color: #141414;
+}
