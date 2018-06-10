@@ -30,13 +30,13 @@ body {
 
 .header {
     height: 990px;
-    background-image: url("../img/图层 1.png");
+    background-image: url("../images/图层 1.png");
     text-align: center;
     color: #fff;
 }
 
 .header .header-bg {
-    background-image: url("../img/Background .png");
+    background-image: url("../images/Background.png");
     height: 100%;
     width: 100%;
 }
@@ -62,7 +62,7 @@ body {
     width: 970px;
     height: 250px;
     margin: 0 auto;
-    background-image: url('../img/Placeholder.png');
+    background-image: url('../images/Placeholder.png');
 }
 
 .register .register-title {
@@ -166,12 +166,12 @@ body {
 }
 
 .middle .action {
-    background: url("../img/图层 2.png") no-repeat;
+    background: url("../images/图层 2.png") no-repeat;
     height: 800px;
 }
 
 .middle .action .action-bg {
-    background: url("../img/Background .png");
+    background: url("../images/Background.png");
     height: 100%;
     width: 100%;
 }
@@ -218,14 +218,14 @@ body {
     height: 600px;
     right: 0;
     bottom: 500px;
-    background: url("../img/IPad.png") no-repeat;
+    background: url("../images/IPad.png") no-repeat;
 }
 
 .middle .action .Screen {
     position: relative;
     left: 60px;
     top: 30px;
-    background: url("../img/Screen.png") no-repeat;
+    background: url("../images/Screen.png") no-repeat;
     width: 585px;
     height: 542px;
 }
