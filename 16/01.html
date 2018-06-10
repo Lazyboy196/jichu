@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>IFE ECMAScript</title>
+</head>
+<body>
+<input id="first-number" type="number" value="0" placeholder="第一个数字">
+<input id="second-number" type="number" value="0" placeholder="第二个数字">
+<button id="add-btn">加</button>
+<button id="minus-btn">减</button>
+<button id="times-btn">乘</button>
+<button id="divide-btn">除</button>
+<p id="result">运算结果:</p>
+<script>
+var btns = document.getElementsByTagName('button');
+for (var i = 0; i <btns.length ; i++) {
+    btns[i].onclick = function () {
+        document.getElementById('result').innerHTML = "运算结果:";
+        var id =this.id;
+        var first_number = Number(document.getElementById('first-number').value);
+        var second_number = Number(document.getElementById('second-number').value);
+        var x=0;
+        switch (id) {
+            case "add-btn": x=first_number + second_number;
+                break;
+            case "minus-btn": x=first_number - second_number;
+                break;
+            case "times-btn": x=first_number * second_number;
+                break;
+            case "divide-btn": x=first_number / second_number;
+                break;
+            default: break;
+        }
+        if (isNaN(x)) {
+            document.getElementById('result').innerHTML += "非法的计算!";
+        }
+         else document.getElementById('result').innerHTML += x;
+    }
+}
+</script>
+</body>
+</html>
