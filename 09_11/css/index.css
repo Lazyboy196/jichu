@@ -30,7 +30,7 @@ body {
 
 .header {
     height: 990px;
-    background-image: url("../images/图层 1.png");
+    background-image: url("../images/tc1.png");
     text-align: center;
     color: #fff;
 }
@@ -166,7 +166,7 @@ body {
 }
 
 .middle .action {
-    background: url("../images/图层 2.png") no-repeat;
+    background: url("../images/tc2.png") no-repeat;
     height: 800px;
 }
 
