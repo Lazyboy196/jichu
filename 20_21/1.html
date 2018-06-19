@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>键盘事件</title>
+</head>
+<body>
+<input id="name" type="text">
+<button id="submit-btn">Submit</button>
+<script>
+    window.onload = function () {
+        var submit_btn = document.getElementById("submit-btn");
+        submit_btn.addEventListener("click", function (ev) {
+            var name = document.getElementById("name");
+            var text = name.value;
+            console.log(text);
+        });
+
+        document.addEventListener("keydown", function (event) {
+            var e = event || window.event || arguments.callee.caller.arguments[0];
+            if (e && event.keyCode == 13) {
+                submit_btn.click();
+            }
+            if (e && e.keyCode == 27) {
+                var name = document.getElementById("name");
+                name.value = '';
+            }
+        },false);
+    };
+</script>
+</body>
+</html>
