@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组来实现队列</title>
+</head>
+<body>
+<input id="queue-input" type="text">
+<p id="queue-cont">队列内容：apple-&gt;pear</p>
+<button id="in-btn">入队</button>
+<button id="out-btn">出队</button>
+<button id="font-btn">打印队头元素内容</button>
+<button id="empty-btn">判断队列是否为空</button>
+
+<script>
+// 基于以上代码，实现如按钮中描述的功能：
+//     实现如阅读材料中，队列的相关入队、出队、获取队头、判空的操作
+//     队头对应数组中最后一个元素
+//     入队和出队操作后，需要在 id 为 queue-cont 的 p 标签中更新显示队列中的内容，
+//     队头在最右侧，中间用 -> 连接（练习使用数组的join方法）
+    var queue = ["apple", "pear"];
+    var queueInput = document.getElementById("queue-input");
+    var queueCont = document.getElementById("queue-cont");
+    var inBtn = document.getElementById("in-btn");
+    var outBtn = document.getElementById("out-btn");
+    var fontBtn = document.getElementById("font-btn");
+    var emptyBtn = document.getElementById("empty-btn");
+
+    inBtn.addEventListener("click",function () {
+        var input=queueInput.value;
+        queue.push(input);
+        queueCont.textContent="队列内容："+queue.join("->");
+    });
+
+    outBtn.addEventListener("click",function () {
+        var input=queueInput.value;
+        var index=queue.indexOf(input);
+        if(index>=0){
+            queue.splice(index,1);
+        }
+        console.log(queue);
+        queueCont.textContent="队列内容："+queue.join("->");
+    });
+
+    fontBtn.addEventListener("click",function () {
+        var f=queue[0];
+        queueCont.textContent="队头内容："+f;
+    });
+
+    emptyBtn.addEventListener("click",function () {
+        if(queue.length==0){
+            queueCont.textContent="数组为空！";
+        }
+        if(queue.length>=0){
+            queueCont.textContent="数组非空！";
+        }
+    });
+
+</script>
+</body>
+</html>
