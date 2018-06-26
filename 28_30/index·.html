@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>邮箱提示</title>
+    <style>
+        ul, li, input {
+            list-style: none;
+            width: 220px;
+            padding: 0;
+            margin: 0;
+            font: 18px/1.4 "Microsoft YaHei UI Light";
+        }
+
+        input {
+            border: 1px solid #000;
+        }
+
+        .wrapper {
+            padding-top: 100px;
+            padding-left: 530px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <input id="email-input" type="email" maxlength="20">
+    <ul id="email-sug-wrapper" class="email-sug"></ul>
+</div>
+<script>
+    window.onload = function () {
+        // 邮箱后缀List
+        var postfixList = ['163.com', 'gmail.com', '126.com', 'qq.com', '263.net'];
+        var input = document.getElementById("email-input");
+        var wrapper = document.getElementById("email-sug-wrapper");
+        var tipIndex = 0;
+
+        input.focus();
+        //input事件监听
+        input.addEventListener("keyup", function () {
+            // 获取用户输入，生成提示框中的提示内容，将提示内容添加到email-sug-wrapper中
+            // 控制email-sug-wrapper的显示/隐藏状态
+            var value = feedIn(this);
+            isHide(value);
+            hsaBlank(value);
+            wrapperText(value);
+        });
+
+        wrapper.addEventListener("click", function (e) {
+            var e = e || window.event;
+            var t = e.target;
+            if (t.nodeName.toLowerCase() == "li") {
+                input.value = t.textContent;
+                input.focus();
+            }
+        });
+
+        wrapper.addEventListener("mouseover", function (e) {
+            var e = e || window.event;
+            var t = e.target;
+            if (t.nodeName.toLowerCase() == "li") {
+                t.style = "background-color:#00E5EE;";
+            }
+        });
+
+        wrapper.addEventListener("mouseout", function (e) {
+            var e = e || window.event;
+            var t = e.target;
+            if (t.nodeName.toLowerCase() == "li") {
+                t.style = "";
+            }
+        });
+
+        //监听按键
+        window.addEventListener("keyup", function (e) {
+            var keycode = e.keyCode;
+            var li = document.getElementsByTagName("li");
+            if (li.length >= 0) {
+                for (var i = 0; i <li.length ; i++) {
+                    li[i].style='';
+                }
+            }
+            //上级
+            if (keycode == "38") {
+                // 不是第一个
+                if (tipIndex <= 0) {
+                    tipIndex = 0;
+                } else {
+                    tipIndex = Number(tipIndex)-1;
+                }
+            }
+            //下键
+            if (keycode == "40") {
+                if (tipIndex >= Number(postfixList.length)-1) {
+                    tipIndex = 0;
+                } else {
+                    tipIndex = Number(tipIndex)+1;
+                }
+            }
+            if (li.length >= 0) {
+                li[tipIndex].style='background-color:#00E5EE;';
+            }
+            // 按的是回车
+            if (keycode == "13") {
+                // 从当前提示框中选第 tipIndex 个Li，将其HTML内容解码后填到input中
+                input.value=li[tipIndex].textContent;
+                // 隐藏提示框
+                hideWrapper()
+            }
+            // 按的是ESC
+            if (keycode == "27") {
+                //全选所有输入内容
+                input.select();
+            }
+        });
+
+        //获取用户输入
+        function feedIn(input) {
+            //拿到input输入框的输入内容trim后返回
+            var value = input.value;
+            return value;
+        }
+
+        //生成提示框中的提示内容
+        function wrapperText(value) {
+            // 清除原提示内容
+            if (wrapper.childNodes.length >= 0) {
+                wrapper.innerHTML = "";
+            }
+            var index = value.indexOf("@");
+            var str = "";
+            if (index != -1) {
+                var split = value.split(index);
+                str = split[0];
+            } else {
+                str = value + "@";
+            }
+            // 把用户输入和每一个postfix进行结合成为每一个Li
+            for (var i = 0; i < postfixList.length; i++) {
+                var li = document.createElement("li");
+                li.textContent = str + postfixList[i];
+                wrapper.append(li);
+            }
+        }
+
+        //控制email-sug-wrapper的显示/隐藏状态
+        function isHide(value) {
+            if (value != "") {
+                //显示提示框
+                showWrapper();
+            } else {
+                //隐藏提示框
+                hideWrapper();
+            }
+        }
+
+        function hsaBlank(value) {
+            //全角空格
+            var reg1 = "\u3000";
+            //半角空格
+            var reg2 = "\u0020";
+            if (value.indexOf(reg1) != -1) {
+                hideWrapper();
+            }
+            if (value.indexOf(reg2) != -1) {
+                hideWrapper();
+            }
+        }
+
+        //隐藏提示框
+        function hideWrapper() {
+            // 做具体隐藏提示框的操作
+            wrapper.style.display = "none";
+        }
+
+        //显示提示框
+        function showWrapper() {
+            // 做具体显示提示框的操作
+            wrapper.style.display = "";
+        }
+    };
+</script>
+</body>
+</html>
