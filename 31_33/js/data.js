@@ -27,7 +27,7 @@ Data.data = function (rcheck, pcheck) {
     for (var i = 0; i < pcheck.length; i++) {
         for (var j = 0; j < d.length; j++) {
             if (pcheck[i].value == d[j].product) {
-                data[k++] = sourceData[i];
+                data[k++] = d[j];
             }
         }
     }
