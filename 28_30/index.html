@@ -6,10 +6,14 @@
     <style>
         ul, li, input {
             list-style: none;
-            width: 220px;
+            width: 280px;
             padding: 0;
             margin: 0;
             font: 18px/1.4 "Microsoft YaHei UI Light";
+        }
+
+        li {
+            border: 1px solid rgba(0,25,25,0.2);
         }
 
         input {
@@ -24,7 +28,7 @@
 </head>
 <body>
 <div class="wrapper">
-    <input id="email-input" type="email" maxlength="20">
+    <input id="email-input" type="email" maxlength="16">
     <ul id="email-sug-wrapper" class="email-sug"></ul>
 </div>
 <script>
@@ -84,7 +88,7 @@
             if (keycode == "38") {
                 // 不是第一个
                 if (tipIndex <= 0) {
-                    tipIndex = 0;
+                    tipIndex = Number(postfixList.length)-1;
                 } else {
                     tipIndex = Number(tipIndex)-1;
                 }
