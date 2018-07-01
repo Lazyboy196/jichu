@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>单选</title>
+<style>
+    tr, td, th, table {
+        padding: 3px;
+        margin: 0;
+        border-spacing: 0;
+        border-collapse: collapse;
+        border: 1px solid #111;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+<span>地区</span>
+<select id="region-select">
+    <option value="all">所有</option>
+    <option value="华南">华南</option>
+    <option value="华东">华东</option>
+    <option value="华北">华北</option>
+</select>
+<span>商品</span>
+<select id="product-select">
+    <option value="all">所有</option>
+    <option value="手机">手机</option>
+    <option value="笔记本">笔记本</option>
+    <option value="智能音箱">智能音箱</option>
+</select>
+<div>
+    <table id="table-wrapper"></table>
+</div>
+<script src='data.js'></script>
+<script>
+    var sourceData=[];
+    if (localStorage.myData) {
+        sourceData=localStorage.yData;
+    } else {
+        localStorage.myData=Data;
+        sourceData=localStorage.myData;
+    }
+    console.log(sourceData);
+    // 我们希望你实践一下，看上去不是输入框，但鼠标移动上去或者点击就变成一个可编辑的状态。需求如下：
+    // 把表格恢复成没有input的状态
+    // 当鼠标滑动过某一个数字的单元格时，数字旁边显示一个铅笔的icon，或者显示灰色的小小的编辑两个字
+    // 当鼠标点击某个数字的单元格时，这个数字进入编辑状态，单元格内容变成一个输入框，输入框右边是取消和确定
+    // 点击取消，输入框消失，恢复出原来数字
+    // 点击确定，输入框消失，数字变成编辑的，这个过程中需要判断输入的正确性，如果输入的不是数字，则弹出提示
+    // 点击该单元格以外的页面其他任何地方，除了响应对应行为外，同时等同于点击了取消，输入状态消失
+    // 理论上，同一时刻，只有一个单元格处于编辑状态
+    // 在输入框中，按ESC键等同于按取消
+    // 在输入框中，按回车键等同于按确认
+</script>
+<script src='table.js'></script>
+</body>
+</html>

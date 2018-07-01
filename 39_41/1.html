@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hash的学习1</title>
+</head>
+<body>
+<div id="btnDiv">
+    <button id="a">A</button>
+    <button id="b">B</button>
+    <button id="c">C</button>
+    <button id="d">D</button>
+    <button id="e">E</button>
+    <button id="f">F</button>
+</div>
+<div id="contABC">contABC无</div>
+<div id="contDEF">contDEF无</div>
+<script>
+// 基于以上HTML，点击对应按钮时候，改变div中的内容为按钮的文字。
+// 刷新页面的时候，保持div中的显示
+// 页面URL copy再打开后，保留渲染状态
+// 通过location.hash来实现
+    var contABC = document.getElementById("contABC");
+    var contDEF = document.getElementById("contDEF");
+    var btnDiv = document.getElementById("btnDiv");
+    btnDiv.addEventListener("click",function (e) {
+        var e=e||window.event;
+        var t=e.target;
+        if (t.nodeName.toLowerCase()=="button") {
+            location.hash=t.textContent;
+        }
+    });
+
+    //解析Hash，获取状态参数
+    function getHash() {
+        //取到需要的值，并返回
+        return location.hash.substr(1,location.hash.length);
+    }
+
+    //渲染到div
+    function setCont() {
+        var hash=getHash();
+        if (hash) {
+            if (hash>"C") {
+                contDEF.textContent=hash;
+            } else {
+                contABC.textContent=hash;
+            }
+        }
+    }
+
+    window.onhashchange = function (){
+        setCont();
+    };
+
+    // 进来先执行一次渲染函数()
+    setCont();
+
+
+</script>
+</body>
+</html>

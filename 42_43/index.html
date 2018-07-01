@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>开一家餐厅</title>
+    <style>
+        tr,td,th,table {
+            padding: 2px;
+            margin: 0;
+            text-align: center;
+            font-family: "Microsoft YaHei UI";
+            border: 1px solid #000;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div>
+        <input id="staffId" name="id" type="text" placeholder="请输入新雇员的工号">
+        <input id="staffName" name="name" type="text" placeholder="请输入新雇员的名字">
+        <input id="salary" name="salary" type="number" placeholder="请输入新雇员的工资">
+        <button id="recruit">雇员</button>
+        <button type="reset">刷新</button>
+    </div>
+    <div>
+        <input id="delId" name="delId" type="text" placeholder="请输入要解雇人的工号">
+        <button id="dismissal">解雇</button>
+    </div>
+    <div>
+        <p>选择一个员工的工种</p>
+        <select id="jobid">
+            <option value="01">小红</option>
+            <option value="02">小明</option>
+            <option value="03">小夏</option>
+        </select>
+        <select id="job">
+            <option name="job" value="服务员">服务员</option>
+            <option name="job" value="厨师">厨师</option>
+        </select>
+    </div>
+    <div id="info">
+
+    </div>
+    <div>
+        <p>雇员列表</p>
+        <table>
+            <thead>
+            <th>工号</th>
+            <th>名字</th>
+            <th>工资</th>
+            </thead>
+            <tbody id="staffTable">
+                 <td class="all-td" colspan="3">暂时没有职工哦</td>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <p>员工列表</p>
+        <table>
+            <thead>
+            <th>工号</th>
+            <th>名字</th>
+            <th>工种</th>
+            </thead>
+            <tbody id="jobTable">
+            <td class="all-td" colspan="3">暂时没有哦</td>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <p>菜单列表</p>
+        <table>
+            <thead>
+            <th>名称</th>
+            <th>价格</th>
+            <th>烹饪成本</th>
+            </thead>
+            <tbody id="menuTable">
+            <td class="all-td" colspan="3">暂时菜单没有哦</td>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <p>顾客列表</p>
+        <table>
+            <thead>
+            <th>座位号</th>
+            <th>剩余时间</th>
+            <th>点餐</th>
+            </thead>
+            <tbody id="clientTable">
+            <td class="all-td" colspan="3">暂时菜单没有哦</td>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="Restaurant.js"></script>
+<script src="Staff.js"></script>
+<script src="Client.js"></script>
+<script src="Chef.js"></script>
+<script src="Waiter.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
